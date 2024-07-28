@@ -1,27 +1,27 @@
 // src/App.js
 import React from "react";
-import { Container, AppBar, Toolbar, Typography } from "@mui/material";
-import Profile from "./components/Profile";
-import Projects from "./components/Projects";
-import Blog from "./components/Blog";
-import Contact from "./components/Contact";
-import "./App.css";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+import Navbar from "./components/Navbar";
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#1976d2", // Primary blue color
+    },
+    secondary: {
+      main: "#1565c0", // Darker shade of blue for secondary elements
+    },
+  },
+});
 
 function App() {
   return (
-    <div className="App">
-      <AppBar position="static">
-        <Toolbar>
-          <Typography variant="h6">My Portfolio</Typography>
-        </Toolbar>
-      </AppBar>
-      <Container>
-        <Profile />
-        <Projects />
-        <Blog />
-        <Contact />
-      </Container>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Navbar />
+      {/* 他のコンポーネントを追加 */}
+    </ThemeProvider>
   );
 }
 

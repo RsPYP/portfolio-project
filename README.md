@@ -1,3 +1,41 @@
+ウェブサイトの更新手順
+
+https://rspyp.github.io/portfolio-project/
+
+ローカルでの変更
+
+プロジェクトのコードをローカルで編集します。例えば、React コンポーネントの修正、スタイルの更新、コンテンツの追加などを行います。
+変更をコミット
+
+変更が完了したら、変更内容を Git にコミットします。以下のコマンドを使用します。
+
+sh
+コードをコピーする
+git add .
+git commit -m "Update content or fix issue"
+変更をリモートリポジトリにプッシュ
+
+コミットした変更を GitHub のリポジトリにプッシュします。
+
+sh
+コードをコピーする
+git push origin main
+※ main ブランチはプロジェクトによって異なる場合があります。適切なブランチ名を使用してください。
+
+ビルドとデプロイ
+
+プッシュ後、GitHub Actions や手動でのスクリプトを使ってアプリケーションをビルドし、gh-pages ブランチにデプロイします。手動でデプロイする場合は、以下のコマンドを実行します。
+
+sh
+コードをコピーする
+npm run deploy
+このコマンドは、変更内容をビルドし、gh-pages ブランチにアップロードします。
+
+GitHub Pages での確認
+
+デプロイが完了したら、GitHub リポジトリの「Settings」タブの「Pages」セクションで、GitHub Pages の URL を確認します。
+ウェブブラウザで URL にアクセスし、変更が反映されているか確認します。
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
