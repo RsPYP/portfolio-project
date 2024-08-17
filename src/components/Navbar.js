@@ -1,4 +1,3 @@
-// src/components/Navbar.js
 import React from "react";
 import {
   AppBar,
@@ -12,73 +11,65 @@ import {
   ListItemText,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import { makeStyles } from "@mui/styles";
-import useMediaQuery from "@mui/material/useMediaQuery";
-import { useTheme } from "@mui/material/styles";
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-  title: {
-    flexGrow: 1,
-  },
-  appBar: {
-    backgroundColor: "#1976d2", // Primary blue color
-  },
-}));
+import { useState } from "react";
 
 const Navbar = () => {
-  const classes = useStyles();
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-  const [drawerOpen, setDrawerOpen] = React.useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
   const toggleDrawer = () => {
     setDrawerOpen(!drawerOpen);
   };
 
   return (
-    <div className={classes.root}>
-      <AppBar position="static" className={classes.appBar}>
+    <div>
+      <AppBar position="static">
         <Toolbar>
-          {isMobile ? (
-            <>
-              <IconButton
-                edge="start"
-                className={classes.menuButton}
-                color="inherit"
-                aria-label="menu"
-                onClick={toggleDrawer}
-              >
-                <MenuIcon />
-              </IconButton>
-              <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer}>
-                <List>
-                  {["Home", "Projects", "Blog", "Contact"].map((text) => (
-                    <ListItem button key={text}>
-                      <ListItemText primary={text} />
-                    </ListItem>
-                  ))}
-                </List>
-              </Drawer>
-            </>
-          ) : (
-            <>
-              <Typography variant="h6" className={classes.title}>
-                My Portfolio
-              </Typography>
-              <Button color="inherit">Home</Button>
-              <Button color="inherit">Projects</Button>
-              <Button color="inherit">Blog</Button>
-              <Button color="inherit">Contact</Button>
-            </>
-          )}
+          <IconButton
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            onClick={toggleDrawer}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" style={{ flexGrow: 1 }}>
+            My Portfolio
+          </Typography>
+          <Button color="inherit" href="#profile">
+            Profile
+          </Button>
+          <Button color="inherit" href="#projects">
+            Projects
+          </Button>
+          <Button color="inherit" href="#blog">
+            Blog
+          </Button>
+          <Button color="inherit" href="#contact">
+            Contact
+          </Button>
         </Toolbar>
       </AppBar>
+      <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer}>
+        <List>
+          <ListItem button component="a" href="#profile" onClick={toggleDrawer}>
+            <ListItemText primary="Profile" />
+          </ListItem>
+          <ListItem
+            button
+            component="a"
+            href="#projects"
+            onClick={toggleDrawer}
+          >
+            <ListItemText primary="Projects" />
+          </ListItem>
+          <ListItem button component="a" href="#blog" onClick={toggleDrawer}>
+            <ListItemText primary="Blog" />
+          </ListItem>
+          <ListItem button component="a" href="#contact" onClick={toggleDrawer}>
+            <ListItemText primary="Contact" />
+          </ListItem>
+        </List>
+      </Drawer>
     </div>
   );
 };
