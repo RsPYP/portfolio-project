@@ -1,20 +1,44 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
+import { Box } from "@mui/material";
+import { styled } from "@mui/material/styles";
+
+// スタイル付きのコンテナ
+const Container = styled(Box)({
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "flex-start",
+  gap: "2rem",
+  padding: "2rem",
+});
+
+const Section = styled(Box)({
+  flex: 1,
+});
 
 function Skills() {
   return (
-    <div>
-      <Typography variant="h4" gutterBottom>
-        Skills
-      </Typography>
-      <Typography variant="body1">
-        3. 技術スタック（Skills）
-        使用できるプログラミング言語、フレームワーク、ツールなどの技術スキルをリストアップします。
-        スキルレベルや経験年数を記載すると、より具体的な印象を与えられます。
-        8.証明書や認定（Certifications） 取得した資格や認定書を掲載します。
-        これにより、特定の技術や分野における専門性を示すことができます。
-      </Typography>
-    </div>
+    <Container>
+      <Section>
+        <Typography variant="h4" gutterBottom>
+          技術スタック（Skills）
+        </Typography>
+        <Box mb={2}>
+          <Typography variant="body1">
+            使用できるプログラミング言語、フレームワーク、ツールなどの技術スキルをリストアップ
+            スキルレベルや経験年数を記載
+          </Typography>
+        </Box>
+      </Section>
+      <Section>
+        <Typography variant="h4" gutterBottom>
+          証明書や認定（Certifications）
+        </Typography>
+        <Box mb={2}>
+          <Typography variant="body1">なし</Typography>
+        </Box>
+      </Section>
+    </Container>
   );
 }
 
