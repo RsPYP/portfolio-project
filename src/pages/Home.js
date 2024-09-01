@@ -24,14 +24,15 @@ function Home() {
           自己紹介
         </Typography>
         <Typography variant="body1" paragraph>
-          名前や職業、専門分野、キャリアの背景、スキルセット、興味のある分野などを紹介します。
-          簡単な経歴やこれまでの業績、目指している目標を記載します。
+          名前：平田 瑞樹 職業：エンジニア 専門分野： JS,TSを中心に学習中
+          機械学習、AI分野に興味あり。
         </Typography>
 
         <Typography variant="h4" gutterBottom>
           コンタクト情報
         </Typography>
         <Typography variant="body1" paragraph>
+          mail:hirata.mizuki.970410@gmail.com
           連絡を取るための方法を明記します（メールアドレス、LinkedIn、GitHub、Twitterなど）。
           可能であれば、問い合わせフォームを設置すると良いです。
         </Typography>
