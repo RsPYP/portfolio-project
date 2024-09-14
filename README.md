@@ -2,6 +2,11 @@
 
 https://rspyp.github.io/portfolio-project/
 
+## 作業中のブラウザ確認方法
+
+`npm start`で開発モードのアプリを起動し
+[http://localhost:3000](http://localhost:3000) でブラウザを開いて確認する
+
 ## リンクの更新手順
 
 1. プロジェクトのコードをローカルで編集（develop branch）
@@ -27,8 +32,3 @@ npm run deploy
 ## GitHub Pages での確認
 
 デプロイが完了したら GitHub リポジトリの「Settings」タブの「Pages」セクションで GitHub Pages の URL から反映されているか確認する。
-
-## 作業中のブラウザ確認方法
-
-`npm start`で開発モードのアプリを起動し
-[http://localhost:3000](http://localhost:3000) でブラウザを開いて確認する

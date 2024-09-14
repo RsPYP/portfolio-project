@@ -21,17 +21,46 @@ function Social() {
     <Container>
       <Section>
         <Typography variant="h4" gutterBottom>
-          ブログや記事
+          技術ブログ
         </Typography>
-        <Box mb={2}>
-          <Typography variant="body1">
-            技術的な知識を深めたり、専門分野に関する考えを共有するためのブログや記事を掲載します。
-          </Typography>
-        </Box>
+
         <Box>
-          <Typography variant="body1">
-            自分の考え方や専門知識をアピールする場として有効です。
+          <Typography variant="h6" gutterBottom>
+            Zenn
           </Typography>
+          <Box component="ul" pl={2}>
+            <li>
+              <a
+                href="https://zenn.dev/mhirata"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://zenn.dev/mhirata
+              </a>
+            </li>
+          </Box>
+        </Box>
+
+        <Box>
+          <Typography variant="h6" gutterBottom>
+            SHIFT Group 技術ブログで掲載した記事:
+          </Typography>
+          <Box component="ul" pl={2}>
+            <li>
+              <a
+                href="https://note.shiftinc.jp/n/n26daf5a434b5"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                【Node.js】ライブラリを使用してコマンドラインツールを作成してみた
+              </a>
+            </li>
+          </Box>
+          <Box>
+            <Typography variant="body1">
+              noteで「SHIFT_平田」タグの検索をすると一括で閲覧できます。
+            </Typography>
+          </Box>
         </Box>
       </Section>
 
