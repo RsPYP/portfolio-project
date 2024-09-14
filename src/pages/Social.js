@@ -68,15 +68,19 @@ function Social() {
         <Typography variant="h4" gutterBottom>
           読んだ技術書
         </Typography>
-        <Box mb={2}>
-          <Typography variant="body1">
-            ここに読んだ技術書のリストを表示します。
-          </Typography>
-        </Box>
         <Box>
-          <Typography variant="body1">
-            リストの各項目には、タイトルや著者、読んだ感想を簡単に記載することができます。
-          </Typography>
+          <Box component="ul" pl={2}>
+            <li>
+              <a
+                href="https://amzn.asia/d/2bCAz7b"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                これからはじめるVue.js 3実践入門
+              </a>
+            </li>
+          </Box>
+          <Typography variant="body1">読んだ内容をここに記述</Typography>
         </Box>
       </Section>
     </Container>
