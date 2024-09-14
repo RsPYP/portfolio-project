@@ -3,7 +3,6 @@ import Typography from "@mui/material/Typography";
 import { Box, Button } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-// スタイル付きのコンテナ
 const Container = styled(Box)({
   display: "flex",
   justifyContent: "space-between",
@@ -23,18 +22,31 @@ function Home() {
         <Typography variant="h4" gutterBottom>
           自己紹介
         </Typography>
-        <Typography variant="body1" paragraph>
-          名前：平田 瑞樹 職業：エンジニア 専門分野： JS,TSを中心に学習中
-          機械学習、AI分野に興味あり。
+        <Typography variant="body1">
+          名前：平田 瑞樹
+          <br />
+          職業：エンジニア
+          <br />
+          専門分野：JS, TSを中心に学習中。機械学習、AI分野に興味あり。
         </Typography>
 
         <Typography variant="h4" gutterBottom>
           コンタクト情報
         </Typography>
-        <Typography variant="body1" paragraph>
-          mail:hirata.mizuki.970410@gmail.com
-          連絡を取るための方法を明記します（メールアドレス、LinkedIn、GitHub、Twitterなど）。
-          可能であれば、問い合わせフォームを設置すると良いです。
+        <Typography variant="body1">
+          mail:{" "}
+          <a href="mailto:hirata.mizuki.970410@gmail.com">
+            hirata.mizuki.970410@gmail.com
+          </a>
+          <br />
+          GitHub:{" "}
+          <a
+            href="https://github.com/RsPYP"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://github.com/RsPYP
+          </a>
         </Typography>
       </Section>
 
@@ -42,7 +54,7 @@ function Home() {
         <Typography variant="h4" gutterBottom>
           履歴書
         </Typography>
-        <Typography variant="body1" paragraph>
+        <Typography variant="body1">
           詳細な職歴や学歴、スキルを記載したPDF形式の履歴書をダウンロードできるようにします。
           更新が簡単なリンクとして配置するのも有効です。
         </Typography>
