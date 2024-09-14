@@ -14,6 +14,7 @@ git push origin develop
 ```
 
 3. リモートで確認後に MargeRequest
+
 4. ビルドとデプロイ
    アプリケーションをビルドし gh-pages ブランチにデプロイする
 
